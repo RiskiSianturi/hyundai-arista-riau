@@ -131,7 +131,10 @@ order: 1;
   }
 
   .footer-content {
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 
   .footer-content div {
@@ -264,12 +267,27 @@ footer {
   padding: 20px 0;
   text-align: center;
   color: #333;
+  padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-content {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.footer-info {
+  text-align: center;
+}
+
+.footer-map {
+  width: 100%;
+    max-width: 400px; /* Batasi lebar peta agar sesuai dengan layar kecil */
+    margin: 0; /* Menghapus margin yang tidak diperlukan */
+    padding: 0; /* Menghapus padding jika ada */
 }
 
 .footer-content div {
@@ -301,13 +319,15 @@ footer {
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
+    gap: 10px;
   }
-
+  .footer-info, .footer-map {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
   .footer-content div {
     max-width: 100%;
-  }
-  .a1 {
-    margin-top: 50px;
   }
 }
 
