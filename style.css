@@ -114,7 +114,15 @@ order: 1;
     margin-top: 100px;
   }
 
-  
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer-info, .footer-map, .footer-contact {
+    flex: 1;
+    margin: 0 20px;
+}
 }
 
 /* Styling lainnya tetap sama */
@@ -128,17 +136,6 @@ order: 1;
   .logo img {
       width: 80px;
       height: 40px;
-  }
-
-  .footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .footer-content div {
-      max-width: 100%;
   }
 }
 
@@ -263,72 +260,44 @@ img {vertical-align: middle;}
 }
 
 footer {
-  background-color: #f1f1f1;
-  padding: 20px 0;
-  text-align: center;
-  color: #333;
-  padding: 20px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.footer-info {
+  background-color: #333;
+  color: white;
+  padding: 20px;
   text-align: center;
 }
 
-.footer-map {
-  width: 100%;
-    max-width: 400px; /* Batasi lebar peta agar sesuai dengan layar kecil */
-    margin: 0; /* Menghapus margin yang tidak diperlukan */
-    padding: 0; /* Menghapus padding jika ada */
-}
-
-.footer-content div {
-  margin: 10px;
-}
-
-.footer-info, .footer-map, .footer-contact, .footer-charity {
-  flex: 1 1 200px;
-  max-width: 400px;
-}
-
-.footer-info h3, .footer-contact h3, .footer-charity h3 {
-  margin-bottom: 10px;
-}
-
-.footer-contact a, .footer-charity a {
+.footer-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin: 5px 0;
-  text-decoration: none;
-  color: #333;
 }
 
-.contact-icon {
-  width: 20px;
-  margin-right: 10px;
+.footer-info, .footer-map, .footer-contact {
+  margin: 10px 0;
 }
 
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .footer-info, .footer-map {
-    width: 100%;
-    margin: 0;
-    padding: 0;
+.footer-map iframe {
+  max-width: 100%;
+  height: auto;
 }
-  .footer-content div {
-    max-width: 100%;
-  }
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-copyright {
+  margin-top: 20px;
+  font-size: 14px;
 }
 
 /* Button styles */
